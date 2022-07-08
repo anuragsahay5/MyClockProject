@@ -1,0 +1,31 @@
+var initialSecond = "translateX(2vw) translateY(24.85vw) rotate(";
+var initialMinute = "translateX(4vw) translateY(24.45vw) rotate(";
+var initialHour = "translateX(8vw) translateY(23.75vw) rotate(";
+var minuteHand = document.getElementById("handminute");
+var secondHand = document.getElementById("handsecond");
+var hourHand = document.getElementById("handhour");
+var lst = "deg)";
+var newDate = new Date();
+var valueSecond = newDate.getSeconds();
+var valueMinute = newDate.getMinutes();
+var valueHour = newDate.getHours();
+valueSecond += 1;
+valueMinute += valueSecond / 60;
+valueHour %= 12;
+valueHour += valueMinute / 60;
+valueMinute *= 6;
+valueHour *= 30;
+valueMinute += 90;
+valueHour += 90;
+valueSecond *= 6;
+valueSecond += 90;
+function clockk() {
+  secondHand.style.transform = initialSecond + valueSecond + lst;
+  minuteHand.style.transform = initialMinute + valueMinute + lst;
+  hourHand.style.transform = initialHour + valueHour + lst;
+  document.getElementById("mainf").style.visibility = "visible";
+  valueHour += 1 / 120;
+  valueMinute += 1 / 10;
+  valueSecond += 6;
+}
+setInterval(clockk, 1000);

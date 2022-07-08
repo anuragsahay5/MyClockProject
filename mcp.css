@@ -1,0 +1,71 @@
+
+body {
+  min-height: 400px;
+  min-width: 400px;
+  margin: 0px;
+  background-color: rgb(15 155 3);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#mainf {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+}
+#clock_frame {
+  height: 50vw;
+  width: 50vw;
+  border: 3px solid black;
+  border-radius: 300vw;
+  background-image: url("../MyClockProject/Clock_background.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50vw 50vw;
+}
+#handsecond {
+  margin-top: -1px;
+  height: 0.3vw;
+  width: 23vw;
+  background-color: rgb(253, 2, 2);
+  border-radius: 1000vw;
+  transform-origin: 100% 50%;
+  transform: translateX(2vw) translateY(24.85);
+  transition-property: all;
+}
+#handminute {
+  height: 0.5vw;
+  width: 21vw;
+  background-color: rgb(0, 0, 0 ,0.8);
+  border-radius: 1000vw;
+  transform-origin: 100% 50%;
+  transform: translateX(5vw) translateY(24.45vw);
+}
+#handhour {
+  height: 0.9vw;
+  width: 17vw;
+  background-color: black;
+  border-radius: 1000vw;
+  transform-origin: 100% 50%;
+  transform: translateX(8vw) translateY(23.75vw);
+  opacity: 1;
+}
+#round_dot{
+  width: 2vw;
+  height: 2vw;
+  background-color: red;
+  border-radius: 1000vw;
+  transform-origin: 100% 50%;
+  transform:translateX(24vw) translateY(22.3vw);
+}
+h1,p{
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+a{
+    text-decoration: none;
+    color: #3f2be4;
+}
+
